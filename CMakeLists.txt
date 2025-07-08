@@ -26,7 +26,7 @@ juce_add_plugin(temper
     COMPANY_NAME "creativeintent"
     COMPANY_WEBSITE "https://github.com/creativeintent/temper/tree/master"
     PLUGIN_CODE T3mp 
-    FORMATS Standalone VST3 LV2
+    FORMATS Standalone VST3 LV2 AU
     PRODUCT_NAME "temper"
     DESCRIPTION "temper the temperated distortion plugin"
     IS_SYNTH FALSE
