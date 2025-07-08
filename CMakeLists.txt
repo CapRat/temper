@@ -22,10 +22,11 @@ file(GLOB_RECURSE TEMPER_ASSETS
      ${PROJECT_SOURCE_DIR}/Assets/*)
 
 juce_add_plugin(temper 
-    PLUGIN_MANUFACTURER_CODE bigb 
+   
     COMPANY_NAME "creativeintent"
     COMPANY_WEBSITE "https://github.com/creativeintent/temper/tree/master"
     PLUGIN_CODE T3mp 
+    PLUGIN_MANUFACTURER_CODE Crin 
     FORMATS Standalone VST3 LV2 AU
     PRODUCT_NAME "temper"
     DESCRIPTION "temper the temperated distortion plugin"
@@ -34,6 +35,7 @@ juce_add_plugin(temper
     NEEDS_MIDI_OUTPUT FALSE
     IS_MIDI_EFFECT FALSE
     VST3_CATEGORIES "Distortion"
+    AU_MAIN_TYPE "kAudioUnitType_MusicEffect"
     )
 
 juce_generate_juce_header(temper)
