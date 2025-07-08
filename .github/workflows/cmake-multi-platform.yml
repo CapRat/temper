@@ -53,7 +53,31 @@ jobs:
       shell: bash
       run: |
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
-
+        
+    - name: Install dependencies (Linux only)
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          libasound2-dev \
+          libjack-jackd2-dev \
+          libx11-dev \
+          libxcomposite-dev \
+          libxcursor-dev \
+          libxext-dev \
+          libxinerama-dev \
+          libxrandr-dev \
+          libxrender-dev \
+          libfreetype6-dev \
+          libcurl4-openssl-dev \
+          libssl-dev \
+          libogg-dev \
+          libvorbis-dev \
+          libflac-dev \
+          libglu1-mesa-dev \
+          mesa-common-dev \
+          freeglut3-dev \
+          pkg-config
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
