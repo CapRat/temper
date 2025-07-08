@@ -94,7 +94,7 @@ static float TemperDsp_faustpower2_f(float value) {
 	return value * value;
 }
 
-class TemperDsp : public dsp {
+class TemperDsp : public ::dsp {
 	
  private:
 	
